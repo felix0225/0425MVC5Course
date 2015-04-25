@@ -31,5 +31,10 @@ namespace MVC5Course.Controllers
         {
             return View();
         }
+
+        public ActionResult Cart()
+        {
+            return View();
+        }
     }
 }
