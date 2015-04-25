@@ -11,7 +11,7 @@ namespace MVC5Course.Models
         public MyValidationAttribute()
             : base("MyValidation")
         {
-            
+            ErrorMessage = "此欄位必須為偶數";
         }
 
         public override bool IsValid(object value)

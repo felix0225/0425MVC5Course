@@ -27,7 +27,6 @@ namespace MVC5Course.Models
         public string Gender { get; set; }
         public Nullable<System.DateTime> DateOfBirth { get; set; }
 
-        [MyValidation(ErrorMessage = "請輸入偶數")]
         public Nullable<double> CreditRating { get; set; }
         
         [StringLength(7, ErrorMessage="欄位長度不得大於 7 個字元")]
