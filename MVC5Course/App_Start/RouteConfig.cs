@@ -14,6 +14,18 @@ namespace MVC5Course
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
             routes.MapRoute(
+                name: "jQuery",
+                url: "{controller}.{action}/",
+                defaults: new { controller = "jQuery", action = "each" }
+            );
+
+            routes.MapRoute(
+                name: "DocsjQuery",
+                url: "Docs/{controller}-{action}",
+                defaults: new { controller = "jQuery", action = "each" }
+            );
+
+            routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
                 defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }

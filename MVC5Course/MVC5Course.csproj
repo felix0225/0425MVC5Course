@@ -181,6 +181,7 @@
     <Compile Include="Controllers\ClientsController.cs" />
     <Compile Include="Controllers\CRUDController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\jQueryController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\OrdersController.cs" />
     <Compile Include="Controllers\ProductsController.cs" />
@@ -394,6 +395,7 @@
     <Content Include="Views\CRUD\Index.cshtml" />
     <Content Include="Views\CRUD\Details.cshtml" />
     <Content Include="Views\CRUD\Create.cshtml" />
+    <Content Include="Views\jQuery\each.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
