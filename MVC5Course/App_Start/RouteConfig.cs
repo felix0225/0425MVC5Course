@@ -11,19 +11,20 @@ namespace MVC5Course
     {
         public static void RegisterRoutes(RouteCollection routes)
         {
+            
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
-            routes.MapRoute(
-                name: "jQuery",
-                url: "{controller}.{action}/",
-                defaults: new { controller = "jQuery", action = "each" }
-            );
+            //routes.MapRoute(
+            //    name: "jQuery",
+            //    url: "{controller}.{action}/",
+            //    defaults: new { controller = "jQuery", action = "each" }
+            //);
 
-            routes.MapRoute(
-                name: "DocsjQuery",
-                url: "Docs/{controller}-{action}",
-                defaults: new { controller = "jQuery", action = "each" }
-            );
+            //routes.MapRoute(
+            //    name: "DocsjQuery",
+            //    url: "Docs/{controller}-{action}",
+            //    defaults: new { controller = "jQuery", action = "each" }
+            //);
 
             routes.MapRoute(
                 name: "Default",
