@@ -60,7 +60,7 @@ namespace MVC5Course.Controllers
         [HttpPost]
         public ActionResult Complex1(Simple1ViewModels item)
         {
-            return Content("Simple3:" + item.UserName + " " + item.Password);
+            return Content("Complex1:" + item.UserName + " " + item.Password);
         }
         public ActionResult Complex2()
         {
@@ -69,8 +69,35 @@ namespace MVC5Course.Controllers
         [HttpPost]
         public ActionResult Complex2(Simple1ViewModels item1, Simple1ViewModels item2)
         {
-            return Content("Simple4:" + item1.UserName + " " + item2.Password + " | " + item1.UserName + " " + item2.Password);
+            return Content("Complex2:" + item1.UserName + " " + item2.Password + " | " + item1.UserName + " " + item2.Password);
         }
+        public ActionResult Complex3()
+        {
+            return View();
+        }
+        [HttpPost]
+        public ActionResult Complex3(
+            [Bind(Prefix = "item")]
+            Simple1ViewModels item)
+        {
+            return Content("Complex3:" + item.UserName + " " + item.Password);
+        }
+        public ActionResult Complex4()
+        {
+            var data = from p in db.Client
+                select new Simple1ViewModels()
+                {
+                    UserName = p.FirstName,
+                    Password = p.LastName,
+                    Age = 18
+                };
 
+            return View(data.Take(10));
+        }
+        [HttpPost]
+        public ActionResult Complex4(IList<Simple1ViewModels> smList)
+        {
+            return Content("");
+        }
     }
 }
