@@ -5,3 +5,12 @@
 
 <h2>View1</h2>
 
+<input type="button" onclick="getData();" value="讀取 Json 內容"/>
+
+<script type="text/javascript">
+    function getData() {
+        $.getJSON("/AR/Json1", null, function(data) {
+            console.log(data);
+        });
+    }
+</script>
