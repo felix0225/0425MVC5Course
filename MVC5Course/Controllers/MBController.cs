@@ -99,5 +99,20 @@ namespace MVC5Course.Controllers
         {
             return Content("");
         }
+        public ActionResult Complex5()
+        {
+            return View();
+        }
+        [HttpPost]
+        public ActionResult Complex5(FormCollection form)
+        {
+            var item = new Simple1ViewModels();
+            if (TryUpdateModel<Simple1ViewModels>(item))
+            {
+                return RedirectToAction("Complex5");
+            }
+            return View();
+        }
+
     }
 }
