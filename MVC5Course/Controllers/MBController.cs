@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using MVC5Course.Models;
 
 namespace MVC5Course.Controllers
 {
@@ -34,5 +35,42 @@ namespace MVC5Course.Controllers
 
             return View();
         }
+        public ActionResult Simple1()
+        {
+            return View();
+        }
+        [HttpPost]
+        public ActionResult Simple1(String UserName, String Password)
+        {
+            return Content("Simple1:" + UserName +" " + Password);
+        }
+        public ActionResult Simple2()
+        {
+            return View("Simple1");
+        }
+        [HttpPost]
+        public ActionResult Simple2(FormCollection form)
+        {
+            return Content("Simple2:" + form["UserName"] + " " + form["Password"]);
+        }
+        public ActionResult Complex1()
+        {
+            return View("Simple1");
+        }
+        [HttpPost]
+        public ActionResult Complex1(Simple1ViewModels item)
+        {
+            return Content("Simple3:" + item.UserName + " " + item.Password);
+        }
+        public ActionResult Complex2()
+        {
+            return View();
+        }
+        [HttpPost]
+        public ActionResult Complex2(Simple1ViewModels item1, Simple1ViewModels item2)
+        {
+            return Content("Simple4:" + item1.UserName + " " + item2.Password + " | " + item1.UserName + " " + item2.Password);
+        }
+
     }
 }
