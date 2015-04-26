@@ -69,5 +69,23 @@ namespace MVC5Course.Controllers
             var data = db.Product.Take(10);
             return Json(data,JsonRequestBehavior.AllowGet);
         }
+
+        public ActionResult Redirect1()
+        {
+            return Redirect("/AR/View1");
+        }
+        public ActionResult Redirect2()
+        {
+            return RedirectToAction("File1");
+        }
+        public ActionResult NotFound()
+        {
+            return HttpNotFound();
+        }
+        public ActionResult StatusCode()
+        {
+            return new HttpStatusCodeResult(201, "資料已被成功建立");
+        }
+
     }
 }
