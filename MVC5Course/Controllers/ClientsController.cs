@@ -6,11 +6,13 @@ using System.Linq;
 using System.Net;
 using System.Web;
 using System.Web.Mvc;
+using MVC5Course.ActionFilters;
 using MVC5Course.Models;
 
 
 namespace MVC5Course.Controllers
 {
+    [Logger]
     public class ClientsController : BaseController
     {
         //private FabricsEntities db = new FabricsEntities();
