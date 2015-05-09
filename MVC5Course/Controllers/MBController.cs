@@ -10,6 +10,7 @@ namespace MVC5Course.Controllers
     public class MBController : BaseController
     {
         // GET: MB
+        //[Authorize]
         public ActionResult Index()
         {
             ViewData["MyClient"] = db.Client.Find(100);
