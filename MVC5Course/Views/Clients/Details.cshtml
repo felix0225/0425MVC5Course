@@ -10,15 +10,19 @@
     <h4>Client</h4>
     <hr />
 
-    @Html.DisplayForModel("Client-v2")
+    @*@Html.DisplayForModel("Client-v2")*@
+    @Html.DisplayForModel()
 
     <h4>Client's Order List</h4>
     @{
         var orderList = ViewBag.OrderList as IEnumerable<Order>;
     }
 
-    @*@Html.Action("Index","Orders",new {clientId = Model.ClientId})*@
-    @Html.Partial("OrderList",Model.Order)
+    @*@Html.Action("Index", "Orders", new { clientId = Model.ClientId })*@
+
+    @*@Html.Partial("OrderList", Model.Order.ToList())*@
+
+    @Html.DisplayFor(m => m.Order, "OrderList")
 
 </div>
 <p>
