@@ -1,4 +1,27 @@
-﻿Test
+﻿@{
+    var num = (int[])ViewBag.num;
+}
+@foreach (var item in num)
+{
+    @item
+}
+
+
+@foreach (var item in num)
+{
+    @(item + " ")
+}
+
+
+<ul>
+    @foreach (var item in num)
+    {
+        <li>@item</li>
+    }
+</ul>
+
+<br />
+Test
 <hr/>
 
 @DateTime.Now
@@ -12,24 +35,3 @@ else
 {
     @:非今年
 }
-
-<br/>
-
-@foreach (var item in ViewBag.num)
-{
-    @item
-}
-
-
-@foreach (var item in ViewBag.num)
-{
-    @(item+" ")
-}
-
-
-<ul>
-    @foreach (var item in ViewBag.num)
-    {
-    <li>@item</li>
-    }
-</ul>
