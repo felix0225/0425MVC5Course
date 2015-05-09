@@ -14,25 +14,22 @@ else
 }
 
 <br/>
-@{
-    foreach (var item in ViewBag.num)
+
+@foreach (var item in ViewBag.num)
+{
+    @item
+}
+
+
+@foreach (var item in ViewBag.num)
+{
+    @(item+" ")
+}
+
+
+<ul>
+    @foreach (var item in ViewBag.num)
     {
-        @item
+    <li>@item</li>
     }
-}
-<br/><br/>
-@{
-    foreach (var item in ViewBag.num)
-    {
-        @(item)<text> </text>
-    }
-}
-<br /><br />
-@{
-    <ul>
-        @foreach (var item in ViewBag.num)
-        {
-      <li>@(item)</li>
-        }
-    </ul>
-}
+</ul>
