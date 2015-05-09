@@ -131,8 +131,14 @@
         </dd>
 
     </dl>
-    Order List
-    @Html.Action("Index","Orders",new {clientId = Model.ClientId})
+    <h4>Client's Order List</h4>
+    @{
+        var orderList = ViewBag.OrderList as IEnumerable<Order>;
+    }
+
+    @*@Html.Action("Index","Orders",new {clientId = Model.ClientId})*@
+    @Html.Partial("OrderList",Model.Order)
+
 </div>
 <p>
     @Html.ActionLink("Edit", "Edit", new { id = Model.ClientId }) |
