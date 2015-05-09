@@ -1,0 +1,38 @@
+﻿Test
+<hr/>
+
+@DateTime.Now
+
+<br/>
+@if (DateTime.Now.Year == 2015)
+{
+    @:今年
+}
+else
+{
+    @:非今年
+}
+
+<br/>
+@{
+    foreach (var item in ViewBag.num)
+    {
+        @item
+    }
+}
+<br/><br/>
+@{
+    foreach (var item in ViewBag.num)
+    {
+        @(item)<text> </text>
+    }
+}
+<br /><br />
+@{
+    <ul>
+        @foreach (var item in ViewBag.num)
+        {
+      <li>@(item)</li>
+        }
+    </ul>
+}
