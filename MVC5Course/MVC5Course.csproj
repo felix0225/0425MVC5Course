@@ -215,6 +215,7 @@
     <Compile Include="Controllers\Clients1Controller.cs" />
     <Compile Include="Controllers\ClientsController.cs" />
     <Compile Include="Controllers\CRUDController.cs" />
+    <Compile Include="Controllers\EnumController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\jQueryController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
@@ -318,6 +319,7 @@
     <Compile Include="Models\QueryProduct_Result.Partial.cs">
       <DependentUpon>EFGeneratePartialClass.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\RegViewModels.cs" />
     <Compile Include="Models\RepositoryHelper.cs">
       <DependentUpon>IRepository.EF6.tt</DependentUpon>
     </Compile>
@@ -690,6 +692,10 @@
     <Content Include="Views\Clients1\Details.cshtml" />
     <Content Include="Views\Clients1\Edit.cshtml" />
     <Content Include="Views\Clients1\Index.cshtml" />
+    <Content Include="Views\Enum\Index.cshtml" />
+    <Content Include="Views\Shared\DisplayTemplates\Enum.cshtml" />
+    <Content Include="Views\Shared\EditorTemplates\Enum-radio.cshtml" />
+    <Content Include="Views\Shared\EditorTemplates\Enum.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
