@@ -61,12 +61,14 @@
         <td>
             @Html.ActionLink("Edit", "Edit", new { id=item.ClientId }) |
             @*@Html.ActionLink("Details", "Details", new { id=item.ClientId }) |*@
-            @Ajax.ActionLink("Details", "Index", new { controller = "Orders", clientId = item.ClientId }, new AjaxOptions { UpdateTargetId = "detail" }) |
+            @Ajax.ActionLink("Details", "Details", new { id=item.ClientId }, new AjaxOptions { UpdateTargetId = "detail" }) |
             @Html.ActionLink("Delete", "Delete", new { id=item.ClientId })
         </td>
     </tr>
 }
 
 </table>
+
+<hr/>
 
 <div id="detail"></div>
