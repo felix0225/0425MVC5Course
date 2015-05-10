@@ -9,7 +9,7 @@ namespace MVC5Course.Models
 	{
 	    public override IQueryable<Client> All()
 	    {
-	        return base.All().Where(c => !c.IsDelete);
+            return base.All().Where(c => !c.IsDelete).OrderBy(c => c.ClientId);
 	    }
 
         internal IQueryable<Client> SearchByGender(string gender)
@@ -21,7 +21,7 @@ namespace MVC5Course.Models
             if (string.IsNullOrEmpty(city))
                 return this.All();
             else
-                return this.All().Where(p => p.City == city).Take(10);
+                return this.All().Where(p => p.City == city);
         }
 	    public Client Find(int? id)
 	    {

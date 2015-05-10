@@ -8,6 +8,7 @@ using System.Web;
 using System.Web.Mvc;
 using MVC5Course.ActionFilters;
 using MVC5Course.Models;
+using PagedList;
 
 
 namespace MVC5Course.Controllers
@@ -29,13 +30,14 @@ namespace MVC5Course.Controllers
         }
 
         // GET: Clients
-        public ActionResult Index(string city)
+        public ActionResult Index(string city,int pageNo = 1)
         {
             //var client = db.Client.Include(c => c.Occupation).Take(10);
             var client = repoClient.SearchByCity(city);
             //return View(client.ToList());
 
-            ViewData.Model = client.ToList();
+            ViewData.Model = client.ToPagedList(pageNo, 10);
+            //ViewData.Model = client.ToPagedList(pageNo, 10);
 
             var cityList = repoClient.All().Select(p => new {p.City}).Distinct().ToList();
 
