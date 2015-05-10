@@ -79,7 +79,6 @@
 
 @{
  var data = Model as IPagedList<Client>;
-
 }
 
 @Html.PagedListPager(data, (p) => Url.Action("Index", new { pageNo = p, city = ViewBag.city }),PagedListRenderOptions.EnableUnobtrusiveAjaxReplacing("#Main"))
