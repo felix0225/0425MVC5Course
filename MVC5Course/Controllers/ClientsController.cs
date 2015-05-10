@@ -48,6 +48,7 @@ namespace MVC5Course.Controllers
             //};
 
             ViewBag.cities = new SelectList(cityList, "City", "City", city);
+            ViewBag.city = city;
 
             return View();
         }

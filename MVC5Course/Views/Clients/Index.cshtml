@@ -82,7 +82,7 @@
 
 }
 
-@Html.PagedListPager(data, (p) => Url.Action("Index", new { pageNo = p }),PagedListRenderOptions.EnableUnobtrusiveAjaxReplacing("#Main"))
+@Html.PagedListPager(data, (p) => Url.Action("Index", new { pageNo = p, city = ViewBag.city }),PagedListRenderOptions.EnableUnobtrusiveAjaxReplacing("#Main"))
 
 <hr/>
 
