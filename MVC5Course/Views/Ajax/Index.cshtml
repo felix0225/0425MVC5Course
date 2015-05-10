@@ -8,3 +8,14 @@
 @Ajax.ActionLink("取得目前時間", "GetTime", new AjaxOptions { UpdateTargetId = "Now" })
 
 <div id="Now"></div>
+
+<hr/>
+
+@Ajax.ActionLink("取得 JSON", "GetJson", new AjaxOptions { HttpMethod = "POST",OnSuccess = "gtResult"})
+
+<script>
+    function gtResult(data) {
+        console.log(data.result);
+        alert(data.result);
+    }
+</script>
